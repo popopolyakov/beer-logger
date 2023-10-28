@@ -1,17 +1,14 @@
 import styled from '@emotion/styled';
+import {Router} from "react-router-dom";
 
-import NxWelcome from './nx-welcome';
-
-const StyledApp = styled.div`
-  // Your style here
-`;
 
 export function App() {
   return (
-    <StyledApp>
-      <NxWelcome title="front-beer-logger" />
-    </StyledApp>
+    <Router>
+
+    </Router>
   );
 }
 
 export default App;
+
