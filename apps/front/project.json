@@ -1,7 +1,7 @@
 {
-  "name": "front-beer-logger",
+  "name": "front",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/front-beer-logger/src",
+  "sourceRoot": "apps/front/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/front-beer-logger"
+        "outputPath": "dist/apps/front"
       },
       "configurations": {
         "development": {
@@ -24,15 +24,15 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "front-beer-logger:build"
+        "buildTarget": "front:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "front-beer-logger:build:development",
+          "buildTarget": "front:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "front-beer-logger:build:production",
+          "buildTarget": "front:build:production",
           "hmr": false
         }
       }
@@ -41,14 +41,14 @@
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "front-beer-logger:build"
+        "buildTarget": "front:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "front-beer-logger:build:development"
+          "buildTarget": "front:build:development"
         },
         "production": {
-          "buildTarget": "front-beer-logger:build:production"
+          "buildTarget": "front:build:production"
         }
       }
     },
@@ -57,14 +57,14 @@
       "outputs": ["{options.reportsDirectory}"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/apps/front-beer-logger"
+        "reportsDirectory": "../../coverage/apps/front"
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/front-beer-logger/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/front/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
