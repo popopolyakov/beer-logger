@@ -19,6 +19,9 @@
         "generatePackageJson": true,
         "esbuildOptions": {
           "sourcemap": true,
+          "loader": {
+            ".env": "copy"
+          },
           "outExtension": {
             ".js": ".js"
           }
@@ -29,6 +32,9 @@
         "production": {
           "esbuildOptions": {
             "sourcemap": false,
+            "loader": {
+              ".env": "copy"
+            },
             "outExtension": {
               ".js": ".js"
             }
